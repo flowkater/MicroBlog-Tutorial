@@ -9,6 +9,8 @@ gem 'rails', '3.2.12'
 gem 'slim-rails'
 gem 'slim'
 
+gem 'bootstrap-sass', '2.1'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -18,8 +20,6 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
   gem 'execjs'
-
-
   gem 'uglifier', '>= 1.0.3'
 end
 

@@ -2,20 +2,12 @@ doctype 5
 html
 	head
 		title #{full_title(yield(:title))}
-		/[if lt IE 9] 
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		= render 'layouts/shim'
 		= stylesheet_link_tag "application", media: "all"
 		= javascript_include_tag "application"
 		= csrf_meta_tags
 	body
-		header.navbar.navbar-fixed-top.navbar-inverse
-			.navbar-inner
-				.container
-					= link_to "MicroBlog", '#', id: "logo"
-					nav
-						ul.nav.pull-right
-							li = link_to "Home", '#'
-							li = link_to "Help", '#'
-							li = link_to "Log in", '#'
+		= render 'layouts/header'
 		.container
 			= yield
+			= render 'layouts/footer'
