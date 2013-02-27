@@ -30,7 +30,6 @@ group :assets do
 end
 
 group :development, :test do
-	gem 'thin'
 	gem 'sqlite3'
 	gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
@@ -52,9 +51,11 @@ group :test do
 end
 
 group :production do
-	gem 'pg', '0.12.2'
+	
 end
 
+gem 'pg', '0.12.2'
+  
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
